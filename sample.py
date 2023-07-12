@@ -40,13 +40,13 @@ if __name__ == '__main__':
 	#使用する栞
 	shiori = sys.argv[1]
 	#投稿先のMastodonのURL
-	mastodon_url = 'https://ukadon.shillest.net/'
+	mastodon_url = 'https://fedibird.com/'
 	#アクセストークン これはGitHubのSettingでActions secretsを設定しておきます ナイショの文字列なので
 	access_token = os.getenv('MASTODON_ACCESS_TOKEN')
 	#投稿するメッセージ
 	status = get_message(shiori)
 	#公開範囲 public(公開), unlisted(未収載), private(フォロワーのみ), direct(指定された相手のみ) (directは宛先も必要)
-	visibility = 'unlisted'
+	visibility = 'private'
 	#投稿
 	post_entry(mastodon_url, access_token, status, visibility)
 	#ログメッセージ
