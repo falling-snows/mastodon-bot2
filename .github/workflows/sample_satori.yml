@@ -1,6 +1,6 @@
 name: Satori Sample
 on:
-workflow_dispatch:
+  workflow_dispatch:
 jobs:
   toot:
     runs-on: windows-latest
